@@ -1,0 +1,24 @@
+#!/bin/bash
+# if-then and file inquiries
+
+# Input a file name
+echo -n 'Enter a file name: '
+read name
+
+# File tests are
+#  -e for existence
+#  -x for executable
+#  -d is a directory
+#  -s has size greater than 0
+# Test for existence
+if ( test -e $name ) then
+   echo $name ' exists'
+else
+   echo $name ' does not exist, and neither do you'
+fi
+
+# Show command line arguments
+echo " "
+echo "Command line arguments: "
+echo $@
+

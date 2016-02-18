@@ -1,0 +1,28 @@
+#!/bin/bash
+# if-then and file inquiries
+
+
+# File tests are
+#  -e for existence
+#  -x for executable
+#  -d is a directory
+#  -s has size greater than 0
+
+# Test for existence of makefile
+if ( test -e makefile) then
+   make  # Execute file if exist
+else
+   echo 'makefile does not exist' #Display error message and quit
+   exit -1
+fi
+
+# Test for existence of makefile
+if ( test -x hw1) then
+   ./hw1 $@ # Execute file if exist
+else
+   echo 'hw1 does not exist' #Display error message and quit
+   exit -1
+fi
+
+
+
